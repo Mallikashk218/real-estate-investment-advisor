@@ -20,7 +20,7 @@ from sklearn.preprocessing import OneHotEncoder
 SAMPLE_ROWS = 100_000      # use fewer rows to keep training fast and the model file small
 RANDOM_STATE = 42
 
-df = pd.read_csv("cleaned_housing_data.csv")
+df = pd.read_csv("cleaned_housing_data.csv.gz")
 if len(df) > SAMPLE_ROWS:
     df = df.sample(SAMPLE_ROWS, random_state=RANDOM_STATE)
 
