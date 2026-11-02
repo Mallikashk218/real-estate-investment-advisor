@@ -190,7 +190,7 @@ def skyline_src():
 # ------------------------------------------------------------------
 @st.cache_data
 def load_data():
-    d = pd.read_csv("cleaned_housing_data.csv")
+    d = pd.read_csv("cleaned_housing_data.csv.gz")
     d["Rule_Price"] = d["Price_vs_City_Median"] <= 1.0
     d["Rule_Transport"] = d["Transport_Score"] >= 2
     d["Rule_Schools_Hospitals"] = (d["Nearby_Schools"] + d["Nearby_Hospitals"]) >= 11
