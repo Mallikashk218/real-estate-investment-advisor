@@ -22,7 +22,7 @@ AMENITIES = ["Clubhouse", "Garden", "Gym", "Playground", "Pool"]
 # ------------------------------------------------------------------
 @st.cache_data
 def load_data():
-    d = pd.read_csv("cleaned_housing_data.csv")
+    d = pd.read_csv("cleaned_housing_data.csv.gz")
     d["Rule_Price"] = d["Price_vs_City_Median"] <= 1.0                    # at/below city median price per sqft
     d["Rule_Transport"] = d["Transport_Score"] >= 2                       # medium or high transport
     d["Rule_Schools_Hospitals"] = (d["Nearby_Schools"] + d["Nearby_Hospitals"]) >= 11
